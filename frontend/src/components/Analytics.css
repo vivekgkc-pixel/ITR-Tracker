@@ -1,0 +1,50 @@
+.analytics-page {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.analytics-page h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-auto-rows: auto;
+  align-items: start;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Prevent chart from expanding the card */
+  overflow: hidden;
+  min-height: 0;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.chart-container {
+  position: relative;
+  /* Fixed height prevents Chart.js from entering an infinite resize loop */
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
